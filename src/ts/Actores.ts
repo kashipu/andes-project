@@ -6,9 +6,10 @@ export class Actores {
     descripcion: string;
     seriesActuadas: Serie[];
 
-    constructor(imagen: string, nombre: string, descripcion: string) {
+    constructor(imagen: string, nombre: string, descripcion: string, seriesActuadas?: Serie[]) {
         this.imagen = imagen;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.seriesActuadas = seriesActuadas ?? [];
     }
 }

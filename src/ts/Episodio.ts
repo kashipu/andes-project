@@ -11,5 +11,8 @@ export class Episodio {
     this.duracion = duracion;
     this.serie = serie;
   }
+  createEpisodio(nombre: string, resumen: string, duracion: number, serie: Serie) {
+    return new Episodio(nombre, resumen, duracion, serie);
+  }
 }
 

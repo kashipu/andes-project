@@ -1,3 +1,5 @@
+import { Plataforma } from "./Plataforma";
+
 export class Planes {
     nombre: string;
     precio: number;
@@ -7,5 +9,6 @@ export class Planes {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
+        return { nombre: this.nombre, precio: this.precio, descripcion: this.descripcion}
     }
 }

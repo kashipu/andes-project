@@ -16,20 +16,17 @@ export class Serie {
     imagen: string,
     nombre: string,
     categorias: string[],
-    episodios: Episodio[],
-    directores: Director[],
-    actores: Actores[],
-    plataformas: Plataforma
+    plataformas: Plataforma,
+    directores?: Director[],
+    actores?: Actores[],
+    episodios?: Episodio[]
   ) {
     this.imagen = imagen;
     this.nombre = nombre;
     this.categorias = categorias;
-    this.episodios = episodios;
-    this.directores = directores;
-    this.actores = actores;
     this.plataformas = plataformas;
+    this.episodios = episodios ?? [];
+    this.directores = directores ?? [];
+    this.actores = actores ?? [];
   }
 }
-
-
-
