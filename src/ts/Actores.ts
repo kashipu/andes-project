@@ -1,6 +1,7 @@
 import { Serie } from "./Serie";
 
-export class Actores {
+export const allActores:Actor[] = [];
+export class Actor {
     nombre: string;
     imagen: string;
     descripcion: string;
@@ -11,5 +12,10 @@ export class Actores {
         this.imagen = imagen;
         this.descripcion = descripcion;
         this.seriesActuadas = seriesActuadas ?? [];
+        allActores.push(this);
+    }
+
+    static getAllActores() {
+        return allActores;
     }
 }

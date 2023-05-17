@@ -1,4 +1,4 @@
-import { Actores } from "./Actores.js";
+import { Actor } from "./Actores.js";
 import { Director } from "./Director.js";
 import { Episodio } from "./Episodio.js";
 import { Plataforma, Plataformas } from "./Plataforma.js";
@@ -10,7 +10,7 @@ export class Serie {
   categorias: string[];
   episodios: Episodio[];
   directores: Director[];
-  actores: Actores[];
+  actores: Actor[];
   plataformas: Plataforma;
 
   constructor(
@@ -19,7 +19,7 @@ export class Serie {
     categorias: string[],
     plataformas?: Plataforma,
     directores?: Director[],
-    actores?: Actores[],
+    actores?: Actor[],
     episodios?: Episodio[]
   ) {
     this.imagen = imagen;
