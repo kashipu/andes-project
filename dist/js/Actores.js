@@ -1,7 +1,7 @@
 export class Actores {
-    constructor(imagen, nombre, descripcion, seriesActuadas) {
-        this.imagen = imagen;
+    constructor(nombre, imagen, descripcion, seriesActuadas) {
         this.nombre = nombre;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.seriesActuadas = seriesActuadas !== null && seriesActuadas !== void 0 ? seriesActuadas : [];
     }

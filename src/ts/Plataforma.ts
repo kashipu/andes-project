@@ -1,7 +1,7 @@
 import { Planes } from './Planes.js';
 import { Serie } from './Serie.js';
 
-const Plataformas: Plataforma[] = [];
+export const Plataformas: Plataforma[] = [];
 export class Plataforma {
     nombre: string;
     sitioWeb: string;
@@ -15,7 +15,7 @@ export class Plataforma {
         this.series = series ?? [];
         Plataformas.push(this);
     }
-    static getPlataformas() {
+    static getAllPlataformas() {
         return Plataformas;
     }
     createPlan(nombre: string, precio: number, descripcion: string) {

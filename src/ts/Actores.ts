@@ -1,14 +1,14 @@
 import { Serie } from "./Serie";
 
 export class Actores {
-    imagen: string;
     nombre: string;
+    imagen: string;
     descripcion: string;
     seriesActuadas: Serie[];
 
-    constructor(imagen: string, nombre: string, descripcion: string, seriesActuadas?: Serie[]) {
-        this.imagen = imagen;
+    constructor(nombre: string, imagen: string, descripcion: string, seriesActuadas?: Serie[]) {
         this.nombre = nombre;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.seriesActuadas = seriesActuadas ?? [];
     }

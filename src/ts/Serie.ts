@@ -1,8 +1,9 @@
-import { Actores } from "./Actores";
-import { Director } from "./Director";
-import { Episodio } from "./Episodio";
-import { Plataforma } from "./Plataforma";
+import { Actores } from "./Actores.js";
+import { Director } from "./Director.js";
+import { Episodio } from "./Episodio.js";
+import { Plataforma, Plataformas } from "./Plataforma.js";
 
+export const allSeries:Serie[] = [];
 export class Serie {
   imagen: string;
   nombre: string;
@@ -13,10 +14,10 @@ export class Serie {
   plataformas: Plataforma;
 
   constructor(
-    imagen: string,
     nombre: string,
+    imagen: string,
     categorias: string[],
-    plataformas: Plataforma,
+    plataformas?: Plataforma,
     directores?: Director[],
     actores?: Actores[],
     episodios?: Episodio[]
@@ -24,9 +25,13 @@ export class Serie {
     this.imagen = imagen;
     this.nombre = nombre;
     this.categorias = categorias;
-    this.plataformas = plataformas;
+    this.plataformas = plataformas ?? Plataformas[0];
     this.episodios = episodios ?? [];
     this.directores = directores ?? [];
     this.actores = actores ?? [];
+    allSeries.push(this);
+  }
+  static getAllSeries() {
+    return allSeries;
   }
 }

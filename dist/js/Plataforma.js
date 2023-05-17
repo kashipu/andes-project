@@ -1,5 +1,5 @@
 import { Planes } from './Planes.js';
-const Plataformas = [];
+export const Plataformas = [];
 export class Plataforma {
     constructor(nombre, sitioWeb, planes, series) {
         this.nombre = nombre;
@@ -8,7 +8,7 @@ export class Plataforma {
         this.series = series !== null && series !== void 0 ? series : [];
         Plataformas.push(this);
     }
-    static getPlataformas() {
+    static getAllPlataformas() {
         return Plataformas;
     }
     createPlan(nombre, precio, descripcion) {
