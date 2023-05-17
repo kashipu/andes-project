@@ -1,6 +1,4 @@
-import { Plataforma } from "./Plataforma";
-
-export class Planes {
+export class Plan {
     nombre: string;
     precio: number;
     descripcion: string;
@@ -9,6 +7,5 @@ export class Planes {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
-        return { nombre: this.nombre, precio: this.precio, descripcion: this.descripcion}
     }
 }

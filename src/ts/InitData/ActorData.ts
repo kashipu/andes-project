@@ -1,4 +1,4 @@
-import { Actor } from "../Actores.js";
+import { Actor } from "../Actor.js";
 
 export const createActores = () => {
     const actor1 = new Actor(

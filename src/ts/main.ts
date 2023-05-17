@@ -2,7 +2,7 @@ import { Plataforma } from "./Plataforma.js";
 import { createData } from "./Data.js";
 import { Serie } from "./Serie.js";
 import { Director } from "./Director.js";
-import { Actor } from "./Actores.js";
+import { Actor } from "./Actor.js";
 
 // Crear Datos
 createData();

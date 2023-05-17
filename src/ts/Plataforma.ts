@@ -1,25 +1,25 @@
-import { Planes } from './Planes.js';
+import { Plan } from './Plan.js';
 import { Serie } from './Serie.js';
 
-export const Plataformas: Plataforma[] = [];
+export const allPlataformas: Plataforma[] = [];
 export class Plataforma {
     nombre: string;
     sitioWeb: string;
-    planes: Planes[];
+    planes: Plan[];
     series: Serie[];
 
-    constructor(nombre: string, sitioWeb: string, planes?: Planes[], series?: Serie[]) {
+    constructor(nombre: string, sitioWeb: string, planes?: Plan[], series?: Serie[]) {
         this.nombre = nombre;
         this.sitioWeb = sitioWeb;
         this.planes = planes ?? [];
         this.series = series ?? [];
-        Plataformas.push(this);
+        allPlataformas.push(this);
     }
     static getAllPlataformas() {
-        return Plataformas;
+        return allPlataformas;
     }
     createPlan(nombre: string, precio: number, descripcion: string) {
-        this.planes.push(new Planes(nombre, precio, descripcion));
+        this.planes.push(new Plan(nombre, precio, descripcion));
     }
 }
 
