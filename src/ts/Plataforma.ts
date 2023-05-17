@@ -6,4 +6,11 @@ export class Plataforma {
     sitioWeb: string;
     planes: Planes[];
     series: Serie[];
+
+    constructor(nombre: string, sitioWeb: string, planes: Planes[], series: Serie[]) {
+        this.nombre = nombre;
+        this.sitioWeb = sitioWeb;
+        this.planes = planes;
+        this.series = series;
+    }
 }
