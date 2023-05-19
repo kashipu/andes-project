@@ -5,7 +5,7 @@ import { createDirectores } from "./InitData/DirectorData.js";
 import { createActores } from "./InitData/ActorData.js";
 export const createData = () => {
     createPlataformas();
-    createSeries();
     createDirectores();
     createActores();
+    createSeries();
 };

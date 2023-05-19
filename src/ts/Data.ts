@@ -6,7 +6,7 @@ import { createActores } from "./InitData/ActorData.js";
 
 export const createData = () => {
     createPlataformas();
-    createSeries();
     createDirectores();
     createActores();
+    createSeries();
 }

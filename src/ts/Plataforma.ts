@@ -15,8 +15,16 @@ export class Plataforma {
         this.series = series ?? [];
         allPlataformas.push(this);
     }
-    static getAllPlataformas() {
-        return allPlataformas;
+    static getAllNamePlataformas() {
+        let plataformasNombre:string[] = []
+        allPlataformas.forEach(plataforma => {
+            plataformasNombre.push(plataforma.nombre)
+        })
+        return plataformasNombre
+    }
+    static getPlataformaByIndex(index:number) {
+       const pl = allPlataformas[index]
+       return `${pl.nombre} tiene ${pl.planes.length} planes`
     }
     createPlan(nombre: string, precio: number, descripcion: string) {
         this.planes.push(new Plan(nombre, precio, descripcion));

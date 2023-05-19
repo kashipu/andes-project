@@ -8,4 +8,5 @@ export class Plan {
         this.precio = precio;
         this.descripcion = descripcion;
     }
+
 }
