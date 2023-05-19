@@ -75,5 +75,12 @@ export class Serie {
   setCategoria(nuevaCategoria: string[]) {
     this.categorias.push(...nuevaCategoria)
   }
-
+  get Actores() {
+    console.log(`Los actores son`)
+    return this.actores
+  }
+  get Directores() {
+    console.log(`Los directores son`)
+    return this.directores
+  }
 }
