@@ -7,6 +7,9 @@ import { Actor } from "./Actor.js";
 // Crear Datos
 createData();
 
+const root: HTMLElement = document.querySelector("#app") as HTMLElement;
+root.innerHTML = `Archivo cargado`;
+
 const serie4 = new Serie(
     "Breaking bad",
     "https://i.ebayimg.com/images/g/eKEAAOxyOMdS4U2W/s-l500.jpg",
@@ -14,17 +17,17 @@ const serie4 = new Serie(
 
 // Metodos de los enunciados
 // 1. Mostrar el listado de todas las series
-console.log(Serie.getAllSeries());
+console.log("1. Mostrar el listado de todas las series \n ", Serie.getAllSeries());
 // 2. Mostrar el detalle de una serie en particular
-console.log(Serie.getSerieByIndex(1));
+console.log("2. Mostrar el detalle de una serie en particular \n", Serie.getSerieByIndex(1));
 // 3. Mostrar el listado de categorías
-console.log(Serie.getAllCategorias())
+console.log("3. Mostrar el listado de categorías \n", Serie.getAllCategorias())
 // 4. Mostrar el listado de directores y actores de una serie
-console.log(serie4.Actores)
+console.log("4. Mostrar el listado de directores y actores de una serie\n", serie4.Actores)
 // 5. Mostrar el detalle de un director y de un actor
-console.log(serie4.Directores)
+console.log("5. Mostrar el detalle de un director y de un actor\n", serie4.Directores)
 // 6. Mostrar el listado de las plataformas
-console.log(Plataforma.getAllNamePlataformas())
+console.log("6. Mostrar el listado de las plataformas\n", Plataforma.getAllNamePlataformas())
 // 7. Mostrar detalle de una plataforma
 console.log(Plataforma.getPlataformaByIndex(1))
 // 8. Crear una nueva serie
